@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragonCart</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href="menu.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="middle">
+            <a href="menu.html">Products</a>
+        </div>
+
+        <div class="right">
+            <button id="cartBTN" onclick="toggleCart()">Cart 🛒 </button>
+        </div>
+    </nav>
+
+
+<section>
+        <div class="item" id="productsContainer" >
+        </div>
+
+</section>
+
+
+<section>
+    <div class="cartcontainer" id="cart">
+        <p class="start">Your items:</p>
+        <ul id="list"></ul>
+        <button class="checkout-btn" onclick="togglepaymentSection(); toggleCart()">Go to Payment</button>
+        <button id="clearCartBtn">Clear Cart</button>
+    </div>
+</section>
+
+
+<section>
+    <div class="payment" id="payment">
+        <h2>Payment</h2>
+        <ul id="payment-cart"></ul>
+        <p id="payment-total">Total: $0</p>
+
+        <!-- Card Information Form -->
+         <form id="cardForm">
+            <label for="name">Name on Card</label>
+            <input type="text" id="cardNane" placeholder="John Doe" required >
+
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password"  id="cvv" placeholder="123" required>
+
+
+            <label for="Address">Enter Your Address</label>
+            <input type="text"  id="address" placeholder="90 Example street" required>
+
+            <button type="submit" class="pay-btn">Pay Now</button>
+
+         </form>
+        <button class="close" onclick="togglepaymentSection();">Cancel</buton>
+    </div>
+</section>
+<footer>
+    <p>Made by Ahmed Deedat Ryan</p>
+</footer>
+</body>
+<script src="script.js"></script>
+</html>
